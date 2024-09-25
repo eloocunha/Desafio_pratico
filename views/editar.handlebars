@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    {{#each post}}
+        {{#dataValues}}
+            <form action="/editar-usuario/{{id}}" method="post" class="container mx-auto col">
+                <p class="text-start fs-5 mt-3">Editar</p>
+                <div class="col gap-3 my-3 d-flex flex-column">
+                    <div class="col">
+                        <div class="col">
+                            Nome:
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="nome" name="nome" value="{{nome}}">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col">
+                            Endereço:
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="endereco" name="endereco" value="{{endereco}}">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col">
+                            Bairro:
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="bairro" name="bairro" value="{{bairro}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="col">
+                                CEP:
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="cep" name="cep" value="{{cep}}">
+                            </div>
+                            </div>
+                        </div>                    
+                        <div class="col">
+                            <div class="col">
+                                Estado:
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="estado" name="estado" value="{{estado}}">
+                            </div>
+                        </div>
+                    
+                    <div class="col">
+                        <div class="col">
+                            Cidade:
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="cidade" name="cidade" value="{{cidade}}">
+                        </div>
+                        <p></p>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </div>
+                        </div>
+                    </div>
+
+                    
+                </div>  
+            </form>
+        {{/dataValues}}
+    {{/each}}
+</div>

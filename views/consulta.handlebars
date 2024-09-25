@@ -1,0 +1,37 @@
+<div class="container-fluid justify-content-center">
+    <div class="row container">
+        <div class="col"> &nbsp; </div>
+    </div>
+    <div class="row container mx-auto">
+        <div class="col bg-white">
+            <p class="text-start fs-5">Consultas de Clientes</p>
+            <p>
+            <div class="container text-center" >
+                <div class="row bg-primary ">
+                    <div class="col py-2 text-light" style="background: rgb(144, 144, 199);">
+                        Nome </div>
+                    <div class="col py-2 text-light" style="background: rgb(144, 144, 199);">
+                        Endereço </div>
+                    <div class="col py-2 text-light" style="background: rgb(144, 144, 199);">
+                        Bairro </div>
+                    <div class="col py-2 text-light" style="background: rgb(144, 144, 199);">
+                    </div>
+                </div>
+                {{#each posts}}
+                {{#dataValues}}
+                <div class="row border align-items-center">
+                    <div class="col py-2 text-blue"> {{nome}} </div>
+                    <div class="col py-2 text-blue"> {{endereco}} </div>
+                    <div class="col py-2 text-blue"> {{bairro}} </div>
+                    <div class="col py-2 text-blue">
+                        <a href="/editar/{{id}}" class="btn btn-warning btn-sm">Editar</a>
+                        <a href="/excluir/{{id}}" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir?');">Excluir</a>
+                    </div>
+                </div>
+                {{/dataValues}}
+                {{/each}}
+            </div>
+            </p>
+        </div>
+
+    </div>
